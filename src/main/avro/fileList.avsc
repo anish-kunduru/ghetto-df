@@ -1,0 +1,15 @@
+[{"namespace": "avro.files",
+ "type": "record",
+ "name": "file",
+ "fields": [
+   {"name": "filename", "type": "string"},
+   {"name": "size", "type": "long"}
+  ]
+},
+{"namespace": "avro.files",
+ "type": "record",
+ "name": "fileList",
+ "fields": [
+   {"name": "files", "type": {"type": "array", "items": "avro.files.file"}}
+  ]
+}]
