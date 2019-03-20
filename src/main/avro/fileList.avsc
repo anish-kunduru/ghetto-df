@@ -1,15 +1,15 @@
-[{"namespace": "avro.files",
+[{"namespace": "org.target.recruiting.avro.files",
  "type": "record",
- "name": "file",
+ "name": "File",
  "fields": [
    {"name": "filename", "type": "string"},
    {"name": "size", "type": "long"}
   ]
 },
-{"namespace": "avro.files",
+{"namespace": "org.target.recruiting.avro.files",
  "type": "record",
- "name": "fileList",
+ "name": "FileList",
  "fields": [
-   {"name": "files", "type": {"type": "array", "items": "avro.files.file"}}
+   {"name": "files", "type": {"type": "array", "items": "org.target.recruiting.avro.files.File"}}
   ]
 }]

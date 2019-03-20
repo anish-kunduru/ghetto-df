@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package avro.files;
+package org.target.recruiting.avro.files;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -12,23 +12,23 @@ import org.apache.avro.message.SchemaStore;
 
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
-public class file extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -5009833859986572800L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"file\",\"namespace\":\"avro.files\",\"fields\":[{\"name\":\"filename\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"size\",\"type\":\"long\"}]}");
+public class File extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -230715427717510031L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"File\",\"namespace\":\"org.target.recruiting.avro.files\",\"fields\":[{\"name\":\"filename\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"size\",\"type\":\"long\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<file> ENCODER =
-      new BinaryMessageEncoder<file>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<File> ENCODER =
+      new BinaryMessageEncoder<File>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<file> DECODER =
-      new BinaryMessageDecoder<file>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<File> DECODER =
+      new BinaryMessageDecoder<File>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageDecoder instance used by this class.
    */
-  public static BinaryMessageDecoder<file> getDecoder() {
+  public static BinaryMessageDecoder<File> getDecoder() {
     return DECODER;
   }
 
@@ -36,17 +36,17 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
    * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    */
-  public static BinaryMessageDecoder<file> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<file>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<File> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<File>(MODEL$, SCHEMA$, resolver);
   }
 
-  /** Serializes this file to a ByteBuffer. */
+  /** Serializes this File to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /** Deserializes a file from a ByteBuffer. */
-  public static file fromByteBuffer(
+  /** Deserializes a File from a ByteBuffer. */
+  public static File fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -59,14 +59,14 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public file() {}
+  public File() {}
 
   /**
    * All-args constructor.
    * @param filename The new value for filename
    * @param size The new value for size
    */
-  public file(java.lang.String filename, java.lang.Long size) {
+  public File(java.lang.String filename, java.lang.Long size) {
     this.filename = filename;
     this.size = size;
   }
@@ -124,36 +124,36 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   /**
-   * Creates a new file RecordBuilder.
-   * @return A new file RecordBuilder
+   * Creates a new File RecordBuilder.
+   * @return A new File RecordBuilder
    */
-  public static avro.files.file.Builder newBuilder() {
-    return new avro.files.file.Builder();
+  public static org.target.recruiting.avro.files.File.Builder newBuilder() {
+    return new org.target.recruiting.avro.files.File.Builder();
   }
 
   /**
-   * Creates a new file RecordBuilder by copying an existing Builder.
+   * Creates a new File RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new file RecordBuilder
+   * @return A new File RecordBuilder
    */
-  public static avro.files.file.Builder newBuilder(avro.files.file.Builder other) {
-    return new avro.files.file.Builder(other);
+  public static org.target.recruiting.avro.files.File.Builder newBuilder(org.target.recruiting.avro.files.File.Builder other) {
+    return new org.target.recruiting.avro.files.File.Builder(other);
   }
 
   /**
-   * Creates a new file RecordBuilder by copying an existing file instance.
+   * Creates a new File RecordBuilder by copying an existing File instance.
    * @param other The existing instance to copy.
-   * @return A new file RecordBuilder
+   * @return A new File RecordBuilder
    */
-  public static avro.files.file.Builder newBuilder(avro.files.file other) {
-    return new avro.files.file.Builder(other);
+  public static org.target.recruiting.avro.files.File.Builder newBuilder(org.target.recruiting.avro.files.File other) {
+    return new org.target.recruiting.avro.files.File.Builder(other);
   }
 
   /**
-   * RecordBuilder for file instances.
+   * RecordBuilder for File instances.
    */
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<file>
-    implements org.apache.avro.data.RecordBuilder<file> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<File>
+    implements org.apache.avro.data.RecordBuilder<File> {
 
     private java.lang.String filename;
     private long size;
@@ -167,7 +167,7 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(avro.files.file.Builder other) {
+    private Builder(org.target.recruiting.avro.files.File.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.filename)) {
         this.filename = data().deepCopy(fields()[0].schema(), other.filename);
@@ -180,10 +180,10 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
     }
 
     /**
-     * Creates a Builder by copying an existing file instance
+     * Creates a Builder by copying an existing File instance
      * @param other The existing instance to copy.
      */
-    private Builder(avro.files.file other) {
+    private Builder(org.target.recruiting.avro.files.File other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.filename)) {
         this.filename = data().deepCopy(fields()[0].schema(), other.filename);
@@ -208,7 +208,7 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'filename'.
       * @return This builder.
       */
-    public avro.files.file.Builder setFilename(java.lang.String value) {
+    public org.target.recruiting.avro.files.File.Builder setFilename(java.lang.String value) {
       validate(fields()[0], value);
       this.filename = value;
       fieldSetFlags()[0] = true;
@@ -228,7 +228,7 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'filename' field.
       * @return This builder.
       */
-    public avro.files.file.Builder clearFilename() {
+    public org.target.recruiting.avro.files.File.Builder clearFilename() {
       filename = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -247,7 +247,7 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'size'.
       * @return This builder.
       */
-    public avro.files.file.Builder setSize(long value) {
+    public org.target.recruiting.avro.files.File.Builder setSize(long value) {
       validate(fields()[1], value);
       this.size = value;
       fieldSetFlags()[1] = true;
@@ -267,16 +267,16 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'size' field.
       * @return This builder.
       */
-    public avro.files.file.Builder clearSize() {
+    public org.target.recruiting.avro.files.File.Builder clearSize() {
       fieldSetFlags()[1] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public file build() {
+    public File build() {
       try {
-        file record = new file();
+        File record = new File();
         record.filename = fieldSetFlags()[0] ? this.filename : (java.lang.String) defaultValue(fields()[0]);
         record.size = fieldSetFlags()[1] ? this.size : (java.lang.Long) defaultValue(fields()[1]);
         return record;
@@ -287,8 +287,8 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<file>
-    WRITER$ = (org.apache.avro.io.DatumWriter<file>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<File>
+    WRITER$ = (org.apache.avro.io.DatumWriter<File>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -296,8 +296,8 @@ public class file extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<file>
-    READER$ = (org.apache.avro.io.DatumReader<file>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<File>
+    READER$ = (org.apache.avro.io.DatumReader<File>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {

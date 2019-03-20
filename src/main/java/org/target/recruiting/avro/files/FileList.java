@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package avro.files;
+package org.target.recruiting.avro.files;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -12,23 +12,23 @@ import org.apache.avro.message.SchemaStore;
 
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
-public class fileList extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2985607172209355814L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"fileList\",\"namespace\":\"avro.files\",\"fields\":[{\"name\":\"files\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"file\",\"fields\":[{\"name\":\"filename\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"size\",\"type\":\"long\"}]}}}]}");
+public class FileList extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -4360043916734620446L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"FileList\",\"namespace\":\"org.target.recruiting.avro.files\",\"fields\":[{\"name\":\"files\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"File\",\"fields\":[{\"name\":\"filename\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"size\",\"type\":\"long\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<fileList> ENCODER =
-      new BinaryMessageEncoder<fileList>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<FileList> ENCODER =
+      new BinaryMessageEncoder<FileList>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<fileList> DECODER =
-      new BinaryMessageDecoder<fileList>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<FileList> DECODER =
+      new BinaryMessageDecoder<FileList>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageDecoder instance used by this class.
    */
-  public static BinaryMessageDecoder<fileList> getDecoder() {
+  public static BinaryMessageDecoder<FileList> getDecoder() {
     return DECODER;
   }
 
@@ -36,35 +36,35 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
    * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    */
-  public static BinaryMessageDecoder<fileList> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<fileList>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<FileList> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<FileList>(MODEL$, SCHEMA$, resolver);
   }
 
-  /** Serializes this fileList to a ByteBuffer. */
+  /** Serializes this FileList to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /** Deserializes a fileList from a ByteBuffer. */
-  public static fileList fromByteBuffer(
+  /** Deserializes a FileList from a ByteBuffer. */
+  public static FileList fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.util.List<avro.files.file> files;
+  @Deprecated public java.util.List<org.target.recruiting.avro.files.File> files;
 
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public fileList() {}
+  public FileList() {}
 
   /**
    * All-args constructor.
    * @param files The new value for files
    */
-  public fileList(java.util.List<avro.files.file> files) {
+  public FileList(java.util.List<org.target.recruiting.avro.files.File> files) {
     this.files = files;
   }
 
@@ -81,7 +81,7 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: files = (java.util.List<avro.files.file>)value$; break;
+    case 0: files = (java.util.List<org.target.recruiting.avro.files.File>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -90,7 +90,7 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'files' field.
    * @return The value of the 'files' field.
    */
-  public java.util.List<avro.files.file> getFiles() {
+  public java.util.List<org.target.recruiting.avro.files.File> getFiles() {
     return files;
   }
 
@@ -98,43 +98,43 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
    * Sets the value of the 'files' field.
    * @param value the value to set.
    */
-  public void setFiles(java.util.List<avro.files.file> value) {
+  public void setFiles(java.util.List<org.target.recruiting.avro.files.File> value) {
     this.files = value;
   }
 
   /**
-   * Creates a new fileList RecordBuilder.
-   * @return A new fileList RecordBuilder
+   * Creates a new FileList RecordBuilder.
+   * @return A new FileList RecordBuilder
    */
-  public static avro.files.fileList.Builder newBuilder() {
-    return new avro.files.fileList.Builder();
+  public static org.target.recruiting.avro.files.FileList.Builder newBuilder() {
+    return new org.target.recruiting.avro.files.FileList.Builder();
   }
 
   /**
-   * Creates a new fileList RecordBuilder by copying an existing Builder.
+   * Creates a new FileList RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new fileList RecordBuilder
+   * @return A new FileList RecordBuilder
    */
-  public static avro.files.fileList.Builder newBuilder(avro.files.fileList.Builder other) {
-    return new avro.files.fileList.Builder(other);
+  public static org.target.recruiting.avro.files.FileList.Builder newBuilder(org.target.recruiting.avro.files.FileList.Builder other) {
+    return new org.target.recruiting.avro.files.FileList.Builder(other);
   }
 
   /**
-   * Creates a new fileList RecordBuilder by copying an existing fileList instance.
+   * Creates a new FileList RecordBuilder by copying an existing FileList instance.
    * @param other The existing instance to copy.
-   * @return A new fileList RecordBuilder
+   * @return A new FileList RecordBuilder
    */
-  public static avro.files.fileList.Builder newBuilder(avro.files.fileList other) {
-    return new avro.files.fileList.Builder(other);
+  public static org.target.recruiting.avro.files.FileList.Builder newBuilder(org.target.recruiting.avro.files.FileList other) {
+    return new org.target.recruiting.avro.files.FileList.Builder(other);
   }
 
   /**
-   * RecordBuilder for fileList instances.
+   * RecordBuilder for FileList instances.
    */
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<fileList>
-    implements org.apache.avro.data.RecordBuilder<fileList> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<FileList>
+    implements org.apache.avro.data.RecordBuilder<FileList> {
 
-    private java.util.List<avro.files.file> files;
+    private java.util.List<org.target.recruiting.avro.files.File> files;
 
     /** Creates a new Builder */
     private Builder() {
@@ -145,7 +145,7 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(avro.files.fileList.Builder other) {
+    private Builder(org.target.recruiting.avro.files.FileList.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.files)) {
         this.files = data().deepCopy(fields()[0].schema(), other.files);
@@ -154,10 +154,10 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
     }
 
     /**
-     * Creates a Builder by copying an existing fileList instance
+     * Creates a Builder by copying an existing FileList instance
      * @param other The existing instance to copy.
      */
-    private Builder(avro.files.fileList other) {
+    private Builder(org.target.recruiting.avro.files.FileList other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.files)) {
         this.files = data().deepCopy(fields()[0].schema(), other.files);
@@ -169,7 +169,7 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'files' field.
       * @return The value.
       */
-    public java.util.List<avro.files.file> getFiles() {
+    public java.util.List<org.target.recruiting.avro.files.File> getFiles() {
       return files;
     }
 
@@ -178,7 +178,7 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'files'.
       * @return This builder.
       */
-    public avro.files.fileList.Builder setFiles(java.util.List<avro.files.file> value) {
+    public org.target.recruiting.avro.files.FileList.Builder setFiles(java.util.List<org.target.recruiting.avro.files.File> value) {
       validate(fields()[0], value);
       this.files = value;
       fieldSetFlags()[0] = true;
@@ -198,7 +198,7 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'files' field.
       * @return This builder.
       */
-    public avro.files.fileList.Builder clearFiles() {
+    public org.target.recruiting.avro.files.FileList.Builder clearFiles() {
       files = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -206,10 +206,10 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
 
     @Override
     @SuppressWarnings("unchecked")
-    public fileList build() {
+    public FileList build() {
       try {
-        fileList record = new fileList();
-        record.files = fieldSetFlags()[0] ? this.files : (java.util.List<avro.files.file>) defaultValue(fields()[0]);
+        FileList record = new FileList();
+        record.files = fieldSetFlags()[0] ? this.files : (java.util.List<org.target.recruiting.avro.files.File>) defaultValue(fields()[0]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
@@ -218,8 +218,8 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<fileList>
-    WRITER$ = (org.apache.avro.io.DatumWriter<fileList>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<FileList>
+    WRITER$ = (org.apache.avro.io.DatumWriter<FileList>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -227,8 +227,8 @@ public class fileList extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<fileList>
-    READER$ = (org.apache.avro.io.DatumReader<fileList>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<FileList>
+    READER$ = (org.apache.avro.io.DatumReader<FileList>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {

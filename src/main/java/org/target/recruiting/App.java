@@ -1,5 +1,7 @@
 package org.target.recruiting;
 
+import org.target.recruiting.avro.files.*;
+
 import java.io.File;
 import java.nio.file.Files;
 import java.util.LinkedList;
@@ -15,9 +17,18 @@ public class App {
         System.out.println("Finding files located under: " + mountpoint);
 
         if (Files.exists(root.toPath())){
+
+            List<org.target.recruiting.avro.files.File> avroFiles = new LinkedList<>();
             for (File f : getListOfFiles(root)){
-                System.out.println(f.getPath() + ", " + f.length());
+                org.target.recruiting.avro.files.File.Builder fileBuilder = org.target.recruiting.avro.files.File.newBuilder();
+                fileBuilder.setFilename(f.getPath());
+                fileBuilder.setSize(f.length());
+                avroFiles.add(fileBuilder.build());
             }
+
+            FileList.Builder fileList = FileList.newBuilder();
+            fileList.setFiles(avroFiles);
+            System.out.println(fileList.build().toString());
         }
     }
 
