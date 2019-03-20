@@ -1,5 +1,9 @@
 package org.target.recruiting;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.target.recruiting.avro.files.*;
 
 import java.io.File;
@@ -28,7 +32,13 @@ public class App {
 
             FileList.Builder fileList = FileList.newBuilder();
             fileList.setFiles(avroFiles);
-            System.out.println(fileList.build().toString());
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            JsonParser jp = new JsonParser();
+            JsonElement je = jp.parse(fileList.build().toString());
+            String prettyJsonString = gson.toJson(je);
+
+            System.out.println(prettyJsonString);
         }
     }
 
