@@ -37,7 +37,7 @@ cmake-build-*/
 
 # IntelliJ
 out/
-*iml
+*.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -61,4 +61,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # Maven Generated Binaries
-**/target/**
+target/**
