@@ -16,7 +16,7 @@ public class App {
 
         if (Files.exists(root.toPath())){
             for (File f : getListOfFiles(root)){
-                System.out.println(f.getPath());
+                System.out.println(f.getPath() + ", " + f.length());
             }
         }
     }
