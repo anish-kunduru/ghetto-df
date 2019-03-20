@@ -26,7 +26,7 @@ public class App {
      * @param root The root {@link File}to search under. It is assumed that this file exists or an Exception will be thrown.
      * @return A {@link LinkedList} of all the files stored under the given directory.
      */
-    private static List<File> getListOfFiles(File root){ ;
+    protected static List<File> getListOfFiles(File root){ ;
         List<File> files = new LinkedList<>();
 
         if (Files.isDirectory(root.toPath())){
